@@ -19,7 +19,8 @@ To get started, simply download the latest version of TirelessBud by clicking th
 3. **Run:** Double-click the file and follow the on-screen instructions to install the program.
 
 ## Features
-- Program under development but with a **User-Friendly Interface** that makes complex computations accessible.
+_Program under development_
+- **User-Friendly Interface** that makes complex computations accessible.
 
 ## Usage
 After installation, launch TirelessBud and navigate through the menus to access its features. Detailed documentation is available within the application to help you get started quickly.
