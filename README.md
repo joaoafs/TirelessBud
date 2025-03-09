@@ -9,6 +9,8 @@ To get started, simply download the latest version of TirelessBud by clicking th
   <img src="https://img.shields.io/badge/Download-TirelessBud_v1.0.0-blue?style=for-the-badge" alt="Download TirelessBud v1.0.0">
 </a>
 
+**Security:**  
+This file has been scanned and reviewed by [VirusTotal](https://www.virustotal.com/gui/url/9eedf37100f4b7abee3724bad97d5708659e116833dd607c9c3589911d754ac6/detection) to ensure its safety and integrity, giving you extra confidence in your download.
 
 ### Installation Steps
 
