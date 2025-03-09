@@ -1,6 +1,3 @@
-# TirelessBud
-Program to help with computational functions
-
 **TirelessBud** is a powerful program designed to simplify computational functions and streamline your workflow. It offers a range of tools and algorithms to help you perform complex calculations quickly and efficiently.
 
 ## Download & Installation
