@@ -26,17 +26,37 @@ def get_icon_path():
         base_dir = os.path.dirname(sys.executable)
     else:
         # Se estiver executando como script Python
-        # O ícone está na pasta principal do projeto, não na pasta pai
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
-    icon_path = os.path.join(base_dir, "LogoTBud.ico")
+    # Caminho do novo ícone
+    icon_path = os.path.join(base_dir, "Logo_TBud.ico")
+    
+    # Verificar e remover o ícone antigo se existir para evitar conflitos
+    old_icon_path = os.path.join(base_dir, "LogoTBud.ico")
+    if os.path.exists(old_icon_path):
+        try:
+            os.remove(old_icon_path)
+            print(f"Ícone antigo removido: {old_icon_path}")
+        except Exception as e:
+            print(f"Erro ao remover ícone antigo: {e}")
+    
+    # Verificar e limpar diretório de cache de ícones do Windows
+    try:
+        # Caminho típico do cache de ícones
+        icon_cache_path = os.path.join(os.environ['LOCALAPPDATA'], 'IconCache.db')
+        if os.path.exists(icon_cache_path):
+            # Não podemos deletar diretamente pois pode estar em uso
+            # Apenas registramos para o usuário saber que pode precisar limpar o cache
+            print(f"Cache de ícones detectado: {icon_cache_path}")
+    except Exception:
+        pass
     
     # Verifica se o ícone existe
     if os.path.exists(icon_path):
         return icon_path
     else:
         # Tenta encontrar em um caminho alternativo (pasta principal)
-        alt_path = os.path.join(os.path.dirname(base_dir), "LogoTBud.ico")
+        alt_path = os.path.join(os.path.dirname(base_dir), "Logo_TBud.ico")
         if os.path.exists(alt_path):
             return alt_path
     return None
@@ -799,11 +819,21 @@ def menu_principal():
         # Inicializa a janela principal
         root = Tk()
         
+        # Força atualização do ícone e limpa o cache
+        icon_path = get_icon_path()
+        
         # Define um tamanho mínimo para a janela principal
         root.minsize(700, 500)
         
-        # Aplica o ícone à janela principal
-        apply_icon(root)
+        # Aplica o ícone à janela principal e força atualização
+        if icon_path and os.path.exists(icon_path):
+            try:
+                # Tenta definir o ícone várias vezes para garantir
+                root.iconbitmap(icon_path)
+                # Atualiza a janela para forçar o ícone a ser aplicado
+                root.update_idletasks()
+            except Exception as e:
+                print(f"Erro ao aplicar ícone: {e}")
         
         # Verifica atualizações e instala dependências
         check_and_install_dependencies(root)

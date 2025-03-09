@@ -5,7 +5,7 @@ a = Analysis(
     ['C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\code\\main_exe_safe.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\LogoTBud.ico', '.')],
+    datas=[('C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\Logo_TBud.ico', '.')],
     hiddenimports=['pymupdf', 'PyPDF2', 'openpyxl', 'PIL'],
     hookspath=[],
     hooksconfig={},
@@ -36,6 +36,6 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     version='C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\build\\file_version_info.txt',
-    icon=['C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\LogoTBud.ico'],
+    icon=['C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\Logo_TBud.ico'],
     manifest='C:\\Users\\João Amadeu\\OneDrive\\Documentos\\GitHub\\TirelessBud\\build\\app.manifest',
 )

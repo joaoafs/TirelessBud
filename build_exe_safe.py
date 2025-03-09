@@ -134,7 +134,23 @@ def build_exe_safe():
     # Caminho para o código fonte e ícone
     base_dir = os.path.dirname(os.path.abspath(__file__))
     source_path = os.path.join(base_dir, "code", "main_exe_safe.py")
-    icon_path = os.path.join(base_dir, "LogoTBud.ico")
+    icon_path = os.path.join(base_dir, "Logo_TBud.ico")
+    
+    # Verificar e remover o ícone antigo se existir
+    old_icon_path = os.path.join(base_dir, "LogoTBud.ico")
+    if os.path.exists(old_icon_path):
+        try:
+            os.remove(old_icon_path)
+            print(f"Ícone antigo removido: {old_icon_path}")
+        except Exception as e:
+            print(f"Erro ao remover ícone antigo: {e}")
+    
+    # Verificar se o novo ícone existe
+    if not os.path.exists(icon_path):
+        print(f"ERRO: Ícone novo não encontrado em {icon_path}")
+        return False
+    else:
+        print(f"Usando ícone: {icon_path}")
     
     # Extrai a versão do arquivo fonte
     version = extract_version_from_file(source_path)
