@@ -7,7 +7,10 @@ Program to help with computational functions
 
 To get started, simply download the latest version of TirelessBud by clicking the button below:
 
-[![Download](https://img.shields.io/badge/Download-TirelessBud_v1.0.0-blue?style=for-the-badge)](https://github.com/joaoafs/TirelessBud/blob/main/dist/TirelessBud_v1.0.0.exe)
+<a href="https://raw.githubusercontent.com/joaoafs/TirelessBud/main/dist/TirelessBud_v1.0.0.exe" download>
+  <img src="https://img.shields.io/badge/Download-TirelessBud_v1.0.0-blue?style=for-the-badge" alt="Download TirelessBud v1.0.0">
+</a>
+
 
 ### Installation Steps
 
